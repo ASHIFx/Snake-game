@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter' sans-serif;
+    min-height: 100vh;
+}
+
+.score{
+    text-align: center;
+    padding: 15px;
+}
+
+.board{
+    max-width: 500px;
+    width: 95%;
+    width: 350px;
+    height: 350px;
+    border:2px solid black;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.cell{
+    border: 1px solid rgb(196, 196, 196);
+}
+
+.snake{
+    background-color: green;
+}
+.food{
+    background-color: red;
+    border-radius: 50%;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.btn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.btn:hover{
+  transform: scale(1.05);
+}
+.btn:active{
+  transform: scale(0.95);
+}
+
+.keys{
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(2, 60px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 25px;
+}
+.gameover{
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: red;
+  margin-top: 15px;
+  display: none;
+}
+
+.keys button{
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 12px;
+  background: black;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.keys button:hover{
+  transform: scale(1.05);
+}
+
+.keys button:active{
+  transform: scale(0.95);
+}
+
+.up{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.left{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.down{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.right{
+  grid-column: 3;
+  grid-row: 2;
+}
